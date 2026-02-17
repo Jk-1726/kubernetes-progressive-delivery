@@ -125,3 +125,10 @@ If a container fails readiness checks, traffic continues to flow to stable insta
 Rollout completes only after all instances become healthy.
 
 
+## Engineering Objective
+
+Modern outages often occur during software releases rather than normal operation.
+
+This project demonstrates a deployment strategy that limits user impact during updates by validating new versions before full exposure.
+
+The goal is to reduce deployment blast radius while maintaining service availability.
