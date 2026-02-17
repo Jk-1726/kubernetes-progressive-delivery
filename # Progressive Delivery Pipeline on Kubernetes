@@ -112,3 +112,16 @@ Introduce a new application version
 Verify gradual traffic shift to updated instances  
 Confirm stable rollout completion
 
+## Observed Behaviour
+
+During deployment, both old and new versions run simultaneously.
+
+New instances do not receive traffic until health checks pass.
+
+A portion of requests are served by the new version during rollout.
+
+If a container fails readiness checks, traffic continues to flow to stable instances.
+
+Rollout completes only after all instances become healthy.
+
+
